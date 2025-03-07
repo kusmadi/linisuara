@@ -1,4 +1,4 @@
-# Modul Flutter Linisuara
+# Modul Ajar Flutter Linisuara
 
 Modul ini bertujuan untuk memberikan pemahaman dan keterampilan dasar dalam menggunakan **Flutter** dalam pengembangan aplikasi mobile. Materi yang dibahas mencakup konsep-konsep dasar dari pemrograman, instalasi alat pengembangan, serta penggunaan berbagai widget yang umum digunakan dalam Flutter.
 
