@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:linisuara/widget_interaktif_navigasi/bottom_navigation_bar_widget.dart';
+import 'package:linisuara/widget_interaktif_navigasi/bottom_sheet_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BottomNavigationBarWidget(),
+      home: const BottomSheetWidget(),
     );
   }
 }
