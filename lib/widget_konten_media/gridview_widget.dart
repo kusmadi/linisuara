@@ -10,27 +10,23 @@ class GridViewWidget extends StatefulWidget {
 class _GridViewWidgetState extends State<GridViewWidget> {
   // Daftar gambar yang akan ditampilkan dalam GridView
   final List<String> images = [
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/200',
-    'https://via.placeholder.com/250',
-    'https://via.placeholder.com/300',
-    'https://via.placeholder.com/350',
-    'https://via.placeholder.com/400',
-    'https://via.placeholder.com/450',
-    'https://via.placeholder.com/500',
+    'assets/images/user1.png',
+    'assets/images/user2.png',
+    'assets/images/user3.png',
+    'assets/images/user4.png',
+    'assets/images/user5.png',
+    'assets/images/user6.png',
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('GridView Example'),
-      ),
+      appBar: AppBar(title: const Text('GridView')),
       body: GridView.builder(
-        // Mengatur padding di sekitar GridView
-        padding: EdgeInsets.all(10.0),
+        padding:
+            const EdgeInsets.all(10.0), // Mengatur padding di sekitar GridView
         // Mengatur jumlah kolom dalam grid
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // Jumlah kolom
           crossAxisSpacing: 10.0, // Spasi antar kolom
           mainAxisSpacing: 10.0, // Spasi antar baris
@@ -46,7 +42,7 @@ class _GridViewWidgetState extends State<GridViewWidget> {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
-              child: Image.network(
+              child: Image.asset(
                 images[index],
                 fit: BoxFit
                     .cover, // Mengatur gambar agar menutupi seluruh container

@@ -14,23 +14,19 @@ class _ListViewWidgetState extends State<ListViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('ListView Example'),
-      ),
+      appBar: AppBar(title: const Text('ListView')),
       body: ListView.builder(
-        // Jumlah item dalam ListView
-        itemCount: items.length,
+        itemCount: items.length, // Jumlah item dalam ListView
         // Fungsi yang akan membangun setiap item dalam ListView
         itemBuilder: (context, index) {
           return ListTile(
-            // Judul dari setiap item
-            title: Text(items[index]),
-            // Subtitle (opsional)
-            subtitle: Text('Ini adalah subtitle untuk ${items[index]}'),
-            // Leading icon di sebelah kiri judul
-            leading: Icon(Icons.star),
-            // Trailing icon di sebelah kanan judul
-            trailing: Icon(Icons.arrow_forward),
+            title: Text(items[index]), // Judul dari setiap item
+            subtitle: Text(
+                'Ini adalah subtitle untuk ${items[index]}'), // Subtitle (opsional)
+            leading:
+                const Icon(Icons.star), // Leading icon di sebelah kiri judul
+            trailing: const Icon(
+                Icons.arrow_forward), // Trailing icon di sebelah kanan judul
             // Aksi ketika item di-tap
             onTap: () {
               // Menampilkan snackbar ketika item di-tap
