@@ -13,10 +13,15 @@ class _AppbarWidgetState extends State<AppbarWidget> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          // Judul yang ditampilkan di AppBar
           title: const Text('AppBar Linisuara'),
           actions: [
-            IconButton(icon: const Icon(Icons.search), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
+            IconButton(
+                icon: const Icon(Icons.search), // Tombol aksi di AppBar
+                onPressed: () {}), // Aksi yang dilakukan saat tombol ditekan
+            IconButton(
+                icon: const Icon(Icons.more_vert), // Tombol aksi di AppBar
+                onPressed: () {}), // Aksi yang dilakukan saat tombol ditekan
           ],
         ),
         body: const Center(child: Text('Belajar Flutter')),
