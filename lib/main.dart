@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//Tambahkan text_widget
-import 'package:linisuara/widget_dasar/container_widget.dart';
+//Tambahkan container_widget
+import 'package:linisuara/widget_dasar/row_column_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      //Ganti kode MyHomePage() menjadi TextWidget()
-      home: const ContainerWidget(),
+      //Ganti kode MyHomePage() menjadi ContainerWidget()
+      home: const RowColumnWidget(),
     );
   }
 }
