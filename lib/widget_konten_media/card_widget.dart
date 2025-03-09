@@ -12,18 +12,14 @@ class _CardWidgetState extends State<CardWidget> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Contoh Card Widget'),
-        ),
-        body: Center(
-          child: CardExample(),
-        ),
+        appBar: AppBar(title: const Text('Card Widget')),
+        body: Center(child: ContohCard()),
       ),
     );
   }
 }
 
-class CardExample extends StatelessWidget {
+class ContohCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -43,23 +39,22 @@ class CardExample extends StatelessWidget {
             MainAxisSize.min, // Ukuran kolom disesuaikan dengan kontennya.
         children: <Widget>[
           // ListTile adalah widget yang sering digunakan di dalam Card untuk menampilkan teks dan ikon.
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.album, size: 50), // Ikon di sebelah kiri.
             title: Text('Judul Kartu'), // Judul kartu.
             subtitle: Text('Ini adalah contoh subtitle'), // Subtitle kartu.
           ),
 
           // Divider adalah garis pemisah antara konten.
-          Divider(),
+          const Divider(),
 
           // Padding digunakan untuk memberikan jarak di sekitar konten.
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Text(
-              'Ini adalah contoh konten yang ditampilkan di dalam Card. '
-              'Anda bisa menambahkan widget lain seperti gambar, teks, atau tombol di sini.',
-              style: TextStyle(fontSize: 16.0),
-            ),
+                'Ini adalah contoh konten yang ditampilkan di dalam Card. '
+                'Kamu bisa menambahkan widget lain seperti gambar, teks, atau tombol di sini.',
+                style: TextStyle(fontSize: 16.0)),
           ),
 
           // ButtonBar adalah widget yang digunakan untuk menampilkan tombol-tombol.
@@ -67,13 +62,13 @@ class CardExample extends StatelessWidget {
             children: <Widget>[
               // TextButton adalah tombol dengan teks.
               TextButton(
-                child: Text('Batal'),
+                child: const Text('Batal'),
                 onPressed: () {
                   // Aksi yang dilakukan saat tombol "Batal" ditekan.
                 },
               ),
               TextButton(
-                child: Text('Simpan'),
+                child: const Text('Simpan'),
                 onPressed: () {
                   // Aksi yang dilakukan saat tombol "Simpan" ditekan.
                 },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:linisuara/widget_konten_media/gridview_widget.dart';
+
+import 'desain_animasi/stateless_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const GridViewWidget(),
+      home: Stateless(),
     );
   }
 }
