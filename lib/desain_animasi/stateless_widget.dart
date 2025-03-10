@@ -1,58 +1,47 @@
 import 'package:flutter/material.dart';
 
-class Stateless extends StatefulWidget {
-  const Stateless({super.key});
+class WidgetStateless extends StatefulWidget {
+  const WidgetStateless({super.key});
 
   @override
-  State<Stateless> createState() => _StatelessState();
+  State<WidgetStateless> createState() => _WidgetStatelessState();
 }
 
-class _StatelessState extends State<Stateless> {
+class _WidgetStatelessState extends State<WidgetStateless> {
   @override
   Widget build(BuildContext context) {
-    return MyHomePage();
+    return ContohStatelessWidget();
   }
 }
 
-// MyHomePage adalah StatelessWidget yang menampilkan UI utama aplikasi.
-class MyHomePage extends Stateless {
+// ContohStatelessWidget adalah StatelessWidget yang menampilkan UI utama aplikasi.
+class ContohStatelessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('StatelessWidget'),
-      ),
+      appBar: AppBar(title: const Text('StatelessWidget')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // Widget Text untuk menampilkan teks
-            Text(
-              'Hello, Flutter!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            const Text(
+              'Hai, Flutter!',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20), // Memberikan jarak antara widget
+            const SizedBox(height: 20), // Memberikan jarak antara widget
             // Widget Icon untuk menampilkan ikon
-            Icon(
-              Icons.flutter_dash,
-              size: 50,
-              color: Colors.blue,
-            ),
-            SizedBox(height: 20),
+            const Icon(Icons.flutter_dash, size: 50, color: Colors.blue),
+            const SizedBox(height: 20),
             // Widget ElevatedButton untuk menampilkan tombol
             ElevatedButton(
               onPressed: () {
                 // Aksi yang dilakukan ketika tombol ditekan
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('Button Pressed!'),
-                  ),
+                  const SnackBar(content: Text('Tombol Diklik!')),
                 );
               },
-              child: Text('Press Me'),
+              child: const Text('Tekan Aku'),
             ),
           ],
         ),

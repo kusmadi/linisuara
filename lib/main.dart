@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'desain_animasi/stateless_widget.dart';
+import 'package:linisuara/widget_text_lanjut/expansion_panel_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Stateless(),
+      home: const ExpansionPanelWidget(),
     );
   }
 }
